@@ -7,7 +7,7 @@
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "commonjs",
+    "module": "amd",
     "target": "es5",
     "types": [],
     // For nodejs:
@@ -21,6 +21,7 @@
     //"exactOptionalPropertyTypes": false,
 
     "sourceMap": true,
+    "outFile": "./main.js",
     // Style Options
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
@@ -33,11 +34,16 @@
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": false,
+    "removeComments": true,
     //"jsx": "react-jsx",
     // "verbatimModuleSyntax": true,
     // "isolatedModules": false,
     // "noUncheckedSideEffectImports": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": [
+    // aqui puedo añadir los directorios que quiero excluir del watching
+    // como el defecto de nodemodules
+  ]
 }
