@@ -18,7 +18,7 @@
 
     }
 
-    console.log(flash.getNombre)
+    // console.log(flash.getNombre)
 
 
 

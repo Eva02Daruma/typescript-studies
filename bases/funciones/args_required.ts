@@ -14,6 +14,6 @@
     }
 
     const name = fullName('Tony', 'chopper', true);
-    console.log({name}) 
+    // console.log({name}) 
 
 })()

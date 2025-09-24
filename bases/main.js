@@ -10,6 +10,21 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 (function () {
     var batimovil = {
         carroceria: "Negra",
@@ -65,7 +80,6 @@ var __rest = (this && this.__rest) || function (s, e) {
     };
     var mugiwarasArr = ['luffy', 'nami', 'sanji'];
     var captain = mugiwarasArr[0], nami = mugiwarasArr[1];
-    console.log({ nami: nami, captain: captain });
 })();
 (function () {
     var sora = {
@@ -95,15 +109,73 @@ var __rest = (this && this.__rest) || function (s, e) {
     var hearts = [sora, goofy, cloud, donald];
     for (var _i = 0, hearts_1 = hearts; _i < hearts_1.length; _i++) {
         var heart = hearts_1[_i];
-        console.log(heart.weapon, heart.power);
     }
 })();
 (function () {
     var a = 'fernando';
-    console.log(a);
     var getName = function () {
-        console.log('viejo oldname');
     };
+})();
+(function () {
+    var Musician = (function () {
+        function Musician(name, artist_name, music_genre) {
+            this.name = name;
+            this.artist_name = artist_name;
+            this.music_genre = music_genre;
+        }
+        Musician.getAvgAge = function () {
+            return this.name;
+        };
+        Musician.prototype.bio = function () {
+            return "".concat(this.artist_name, " (").concat(this.music_genre, ")");
+        };
+        Musician.avgAge = 30;
+        return Musician;
+    }());
+    var arca = new Musician('alejandra', 'Arca', 'trap');
+    var porter = new Musician('porter', 'Porter Robinson', 'Hyper Pop');
+})();
+(function () {
+    var Musician = (function () {
+        function Musician(name, artist_name, music_genre) {
+            this.name = name;
+            this.artist_name = artist_name;
+            this.music_genre = music_genre;
+        }
+        Musician.prototype.getFullName = function () {
+            return "".concat(this.name, " ").concat(this.artist_name);
+        };
+        return Musician;
+    }());
+    var VideogameDeveloper = (function (_super) {
+        __extends(VideogameDeveloper, _super);
+        function VideogameDeveloper(name, artist_name, isIndie, music_genre) {
+            var _this = _super.call(this, name, artist_name, music_genre) || this;
+            _this.name = name;
+            _this.artist_name = artist_name;
+            _this.isIndie = isIndie;
+            _this.music_genre = music_genre;
+            return _this;
+        }
+        Object.defineProperty(VideogameDeveloper.prototype, "fullName", {
+            get: function () {
+                return "".concat(this.name, " - ").concat(this.artist_name);
+            },
+            set: function (name) {
+                if (name.length <= 3) {
+                    throw new Error('El nombre debe ser mayor de 3 caracteres.');
+                }
+                this.name = name;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        VideogameDeveloper.prototype.getFullNameDesdeVideogameDeveloper = function () {
+        };
+        return VideogameDeveloper;
+    }(Musician));
+    var toby_fox = new VideogameDeveloper('toby fox', 'Undertale creator', true, 'Game music Compositor');
+    toby_fox.fullName = 'delta';
 })();
 function sumar(a, b) {
     return a + b;
@@ -116,7 +188,6 @@ contar(superHeroes);
 var llamarBatman = function (llamar) {
     if (llamar === void 0) { llamar = true; }
     if (llamar) {
-        console.log("Batiseñal activada");
     }
 };
 llamarBatman();
@@ -139,7 +210,6 @@ noHaceNadaTampoco = noHaceNada;
         return "".concat(firstName, " ").concat(restArgs.join(' '));
     };
     var superman = fullName('Clark', 'que', 'kent');
-    console.log({ superman: superman });
 })();
 (function () {
     var fullName = function (firstName, lastName, upper) {
@@ -155,7 +225,6 @@ noHaceNadaTampoco = noHaceNada;
         }
     };
     var name = fullName('Tony', 'chopper', true);
-    console.log({ name: name });
 })();
 (function () {
     var addNumbers = function (a, b) { return a + b; };
@@ -163,13 +232,9 @@ noHaceNadaTampoco = noHaceNada;
     var saveTheWorld = function () { return "El mundo esta salvado!"; };
     var myFunction;
     myFunction = 10;
-    console.log(myFunction);
     myFunction = addNumbers;
-    console.log(myFunction(1, 2));
     myFunction = greet;
-    console.log('laura');
     myFunction = saveTheWorld;
-    console.log(myFunction());
 })();
 (function () {
     var hero = 'Flash';
@@ -179,7 +244,6 @@ noHaceNadaTampoco = noHaceNada;
     var activateBatisignal = function () {
         return 'batiseñal activada';
     };
-    console.log(typeof activateBatisignal);
     var heroName = returnName();
 })();
 (function () {
@@ -196,7 +260,6 @@ noHaceNadaTampoco = noHaceNada;
             return this.name;
         }
     };
-    console.log(flash.getNombre);
 })();
 (function () {
     var flash = {
@@ -215,34 +278,24 @@ noHaceNadaTampoco = noHaceNada;
 })();
 (function () {
     var myCustomVariable = 'Laura';
-    console.log(myCustomVariable);
-    console.log(typeof myCustomVariable);
     myCustomVariable = 20;
-    console.log(typeof myCustomVariable);
     myCustomVariable = {
         name: 'bruce',
         age: 43,
         powers: ['Idk']
     };
-    console.log(typeof myCustomVariable);
 })();
 (function () {
     var isSuperman = true;
     var isBatman = false;
-    isSuperman = (isBatman) ? true : 'false';
-    console.log({ isSuperman: isSuperman });
 })();
 (function () {
     var avengers = 10;
-    console.log(avengers);
     var villans = 20;
     if (avengers < villans) {
-        console.log('Estamos en problemas');
     }
     else {
-        console.log('Nos salvamos');
     }
     avengers = Number('55A');
-    console.log({ avengers: avengers });
 })();
 //# sourceMappingURL=main.js.map

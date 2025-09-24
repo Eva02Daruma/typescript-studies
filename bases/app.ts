@@ -24,7 +24,7 @@ const bumblebee:Auto = {
   antibalas: true,
   pasajeros:4,
   disparar(){ // El metodo disparar es opcional
-    console.log("Disparando");
+    // console.log("Disparando");
   }
 };
 

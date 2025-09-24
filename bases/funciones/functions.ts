@@ -10,7 +10,7 @@
         return 'batiseñal activada'
     }
 
-    console.log(typeof activateBatisignal)
+    // console.log(typeof activateBatisignal)
 
     const heroName = returnName();
 

@@ -9,16 +9,16 @@
     let myFunction;
 
     myFunction = 10;
-    console.log(myFunction)
+    // console.log(myFunction)
 
     myFunction = addNumbers
-    console.log(myFunction(1,2))
+    // console.log(myFunction(1,2))
 
     myFunction = greet
-    console.log('laura')
+    // console.log('laura')
 
     myFunction = saveTheWorld
-    console.log(myFunction())
+    // console.log(myFunction())
 
 
 })()

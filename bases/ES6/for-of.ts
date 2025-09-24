@@ -5,6 +5,8 @@
         origin: string;
         weapon: string;
         power: number;
+        defense?: number;
+        magic?: number;
     }
 
     const sora:Hearts = {
@@ -38,7 +40,7 @@
     const hearts: Hearts[] = [sora,goofy,cloud,donald];
 
     for (const heart of hearts) {
-        console.log(heart.weapon, heart.power);
+        // console.log(heart.weapon, heart.power);
         
     }
 

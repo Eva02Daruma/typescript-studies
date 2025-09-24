@@ -6,6 +6,6 @@
 
     const superman = fullName('Clark','que','kent');
 
-    console.log({ superman })
+    // console.log({ superman })
 
 })()

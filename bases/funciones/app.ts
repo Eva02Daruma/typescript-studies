@@ -12,7 +12,7 @@ contar(superHeroes);
 //Parametros por defecto
 const llamarBatman = ( llamar:boolean = true ):void => {
   if( llamar ){
-    console.log("Batiseñal activada");
+    // console.log("Batiseñal activada");
   }
 }
 

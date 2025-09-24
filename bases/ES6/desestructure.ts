@@ -29,7 +29,7 @@
     const mugiwarasArr = ['luffy','nami','sanji'];
 
     const [captain, nami, ] = mugiwarasArr;
-    console.log({nami,captain})
+    // console.log({nami,captain})
 
 
 
