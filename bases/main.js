@@ -117,6 +117,40 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 (function () {
+    var Pokemon = (function () {
+        function Pokemon(name, dexNumber) {
+            this.name = name;
+            this.dexNumber = dexNumber;
+        }
+        return Pokemon;
+    }());
+    var Legendary = (function (_super) {
+        __extends(Legendary, _super);
+        function Legendary() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        Legendary.prototype.showOff = function () {
+            return 'A Legendary Pokemon has Appear !!!';
+        };
+        return Legendary;
+    }(Pokemon));
+    var Ultraent = (function (_super) {
+        __extends(Ultraent, _super);
+        function Ultraent() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        Ultraent.prototype.openPortal = function () {
+            return 'An Ultra-ent Portal has opened !!!';
+        };
+        return Ultraent;
+    }(Pokemon));
+    var genesect = new Legendary('Genesect', 649);
+    var tapukoko = new Ultraent('Tapu-koko', 800);
+    var printName = function (character) {
+        console.log(character.name);
+    };
+})();
+(function () {
     var Musician = (function () {
         function Musician(name, artist_name, music_genre) {
             this.name = name;
@@ -176,6 +210,22 @@ var __extends = (this && this.__extends) || (function () {
     }(Musician));
     var toby_fox = new VideogameDeveloper('toby fox', 'Undertale creator', true, 'Game music Compositor');
     toby_fox.fullName = 'delta';
+})();
+(function () {
+    var Apocalipsis = (function () {
+        function Apocalipsis(name) {
+            this.name = name;
+        }
+        Apocalipsis.callApocalipsis = function () {
+            if (!Apocalipsis.intance) {
+                Apocalipsis.intance = new Apocalipsis('bla blu blo');
+            }
+            return Apocalipsis.intance;
+        };
+        return Apocalipsis;
+    }());
+    var apocalipsis = Apocalipsis.callApocalipsis();
+    console.log(apocalipsis);
 })();
 function sumar(a, b) {
     return a + b;
@@ -245,6 +295,41 @@ noHaceNadaTampoco = noHaceNada;
         return 'batiseñal activada';
     };
     var heroName = returnName();
+})();
+(function () {
+    var flash = {
+        name: 'barry allen',
+        age: 24,
+        powers: ['Super fast', 'wow time traveling'],
+    };
+    var superman = {
+        name: 'clark kent',
+        age: 60,
+        powers: ['high speed'],
+        getName: function () {
+            return this.name;
+        }
+    };
+})();
+(function () {
+    var client = {
+        name: 'Laura',
+        age: 25,
+        address: {
+            id: 125,
+            zip: '33223432',
+            city: 'Santiago'
+        }
+    };
+    var client2 = {
+        name: 'Zaf',
+        age: 30,
+        address: {
+            id: 925,
+            zip: '3545432',
+            city: 'Santiago'
+        }
+    };
 })();
 (function () {
     var flash = {
