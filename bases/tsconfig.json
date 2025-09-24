@@ -45,5 +45,8 @@
   "exclude": [
     // aqui puedo añadir los directorios que quiero excluir del watching
     // como el defecto de nodemodules
+  ],
+  "include": [
+    "ES6"
   ]
 }

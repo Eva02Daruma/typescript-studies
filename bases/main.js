@@ -1,4 +1,15 @@
 "use strict";
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
 (function () {
     var batimovil = {
         carroceria: "Negra",
@@ -39,6 +50,60 @@
     var mystique;
     mystique = charles;
     mystique = apocalipsis;
+})();
+(function () {
+    var mugiwaras = {
+        luffy: 'Fighter',
+        chopper: 'Doctor',
+        zoro: 'Sworduser',
+        alive: true,
+        reward: 1111
+    };
+    var printMugiwara = function (_a) {
+        var zoro = _a.zoro, resto = __rest(_a, ["zoro"]);
+        console.log(zoro, resto);
+    };
+    var mugiwarasArr = ['luffy', 'nami', 'sanji'];
+    var captain = mugiwarasArr[0], nami = mugiwarasArr[1];
+    console.log({ nami: nami, captain: captain });
+})();
+(function () {
+    var sora = {
+        name: 'Sora',
+        origin: 'Kingdom Hearts',
+        weapon: 'Keyblade',
+        power: 100
+    };
+    var goofy = {
+        name: 'Goofy the dog',
+        origin: 'disney',
+        weapon: 'Shield',
+        power: 70
+    };
+    var donald = {
+        name: 'Donald duck',
+        origin: 'Disney',
+        weapon: 'Magic wand',
+        power: 40
+    };
+    var cloud = {
+        name: 'Cloud',
+        origin: 'Final Fantasy',
+        weapon: 'Big Sword',
+        power: 125
+    };
+    var hearts = [sora, goofy, cloud, donald];
+    for (var _i = 0, hearts_1 = hearts; _i < hearts_1.length; _i++) {
+        var heart = hearts_1[_i];
+        console.log(heart.weapon, heart.power);
+    }
+})();
+(function () {
+    var a = 'fernando';
+    console.log(a);
+    var getName = function () {
+        console.log('viejo oldname');
+    };
 })();
 function sumar(a, b) {
     return a + b;
