@@ -1,8 +1,5 @@
 node_modules/
-
-
 package-lock.json
-
 bases/node_modules
 ts-node/node_modules
 .DS_Store
