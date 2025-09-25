@@ -1,0 +1,3 @@
+[submodule "ts-node"]
+	path = ts-node
+	url = https://github.com/Eva02Daruma/curso-typescript.git
