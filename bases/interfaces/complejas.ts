@@ -4,6 +4,7 @@
         name: string;
         age?: number;
         address: Address;
+        getFullAddress(id: string): string;
     }
 
     interface Address {
@@ -19,7 +20,10 @@
             id:125,
             zip:'33223432',
             city:'Santiago'
-        }
+        },
+        getFullAddress(id: string) {
+            return this.address.city
+        },
     }
 
     const client2:Client = {
@@ -29,7 +33,10 @@
             id:925,
             zip:'3545432',
             city:'Santiago'
-        }
+        },
+         getFullAddress(id: string) {
+            return this.address.city
+        },
     }
 
 })()

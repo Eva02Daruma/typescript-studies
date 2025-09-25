@@ -7,7 +7,7 @@
         // public music_genre: string = '';
         static avgAge: number = 30;
         static getAvgAge(){
-            return this.name;
+            return this.avgAge;
         }
 
         constructor( 

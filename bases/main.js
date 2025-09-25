@@ -158,7 +158,7 @@ var __extends = (this && this.__extends) || (function () {
             this.music_genre = music_genre;
         }
         Musician.getAvgAge = function () {
-            return this.name;
+            return this.avgAge;
         };
         Musician.prototype.bio = function () {
             return "".concat(this.artist_name, " (").concat(this.music_genre, ")");
@@ -225,7 +225,6 @@ var __extends = (this && this.__extends) || (function () {
         return Apocalipsis;
     }());
     var apocalipsis = Apocalipsis.callApocalipsis();
-    console.log(apocalipsis);
 })();
 function sumar(a, b) {
     return a + b;
@@ -296,6 +295,36 @@ noHaceNadaTampoco = noHaceNada;
     };
     var heroName = returnName();
 })();
+var conducirBatimovil = function (auto) {
+    auto.encender = true;
+    auto.velocidadMaxima = 100;
+    auto.acelerar();
+};
+var batimovil = {
+    encender: false,
+    velocidadMaxima: 0,
+    acelerar: function () {
+        console.log("...... gogogo!!!");
+    }
+};
+var guason = {
+    reir: true,
+    comer: true,
+    llorar: false
+};
+var reir = function (guason) {
+    if (guason.reir) {
+        console.log("JAJAJAJA");
+    }
+};
+var ciudadGotica = function (ciudadanos) {
+    return ciudadanos.length;
+};
+var Persona = (function () {
+    function Persona() {
+    }
+    return Persona;
+}());
 (function () {
     var flash = {
         name: 'barry allen',
@@ -312,6 +341,19 @@ noHaceNadaTampoco = noHaceNada;
     };
 })();
 (function () {
+    var Mutant = (function () {
+        function Mutant() {
+            this.age = 0;
+            this.name = '';
+            this.realName = '';
+        }
+        Mutant.prototype.mutantPower = function (id) {
+            return this.name + '' + this.realName;
+        };
+        return Mutant;
+    }());
+});
+(function () {
     var client = {
         name: 'Laura',
         age: 25,
@@ -319,7 +361,10 @@ noHaceNadaTampoco = noHaceNada;
             id: 125,
             zip: '33223432',
             city: 'Santiago'
-        }
+        },
+        getFullAddress: function (id) {
+            return this.address.city;
+        },
     };
     var client2 = {
         name: 'Zaf',
@@ -328,7 +373,16 @@ noHaceNadaTampoco = noHaceNada;
             id: 925,
             zip: '3545432',
             city: 'Santiago'
-        }
+        },
+        getFullAddress: function (id) {
+            return this.address.city;
+        },
+    };
+})();
+(function () {
+    var addNumbersFunction;
+    addNumbersFunction = function (a, b) {
+        return 10;
     };
 })();
 (function () {
