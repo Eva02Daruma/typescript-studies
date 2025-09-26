@@ -1,22 +1,7 @@
-/// createLRUCache: Implement a LRU Cache Provider with get and set methods.
-/**
- * A Least Recently Used (LRU) cache is a type of cache that evicts the 'least recently used items'
- * when there is a need to constrain its size.
- *
- * For this particular implementation, the size constraint is set at CacheLimits.maxItemsCount.
- * An item is considered accessed whenever `get`, or `set` methods are called with its key.
- *
- * This LRU cache will achieve size constraint by checking the cache size at the time of each new insertion.
- * In the case where the cache has reached its limit, the item least recently accessed will be removed.
- * This removal process will not happen on a separate thread but in the caller's thread,
- * thus potentially blocking their return for a cleanup when deemed necessary.
- */
-
-
-  /// LRU CACHE
+/// LRU CACHE
 let exampleCache:number[]=[2,3,4,5];
 
-export class Deque<T> {
+class Deque<T> {
     private items: T[] = [];
 
     addFront(element: T): void {
@@ -65,7 +50,7 @@ export class Deque<T> {
 }
 
 
-export class LRUCache{
+class LRUCache{
     initializer(c:number){
         //logic
         // cache : contains all the keys (capacity of memory)
@@ -109,15 +94,14 @@ export class LRUCache{
     
 }
 
-// // Usage example
-// const myDeque = new Deque<number>();
-// console.log("My Deque Process")
-// console.log(`Deque capacity is ${myDeque.size}`)
-// myDeque.addBack(10);
-// myDeque.addFront(5);
-// myDeque.addBack(15);
+// Usage example
+const myDeque = new Deque<number>();
+console.log("My Deque Process")
+console.log(`Deque capacity is ${myDeque.size}`)
+myDeque.addBack(10);
+myDeque.addFront(5);
+myDeque.addBack(15);
 
-// console.log(myDeque.removeFront()); // Output: 5
-// console.log(myDeque.removeBack());  // Output: 15
-// console.log(myDeque.peekFront());   // Output: 10
-
+console.log(myDeque.removeFront()); // Output: 5
+console.log(myDeque.removeBack());  // Output: 15
+console.log(myDeque.peekFront());   // Output: 10
