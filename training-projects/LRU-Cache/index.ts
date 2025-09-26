@@ -62,16 +62,30 @@ export class Deque<T> {
     size(): number {
         return this.items.length;
     }
+    display() {
+        return this.items;
+    }
 }
+
+export let cacheCapacity = 0;
+export let cacheD = new Deque<number>();
+export let keyToValue = new Map();
 
 
 export class LRUCache{
+   
     initializer(c:number){
         //logic
         // cache : contains all the keys (capacity of memory)
-        const cache = new Deque<number>();
         // Map : contains the key to value relation
-        const keyToValue = new Map()
+        cacheCapacity = c
+        console.log(`A new LRU Cache has started`)
+        console.log(`the capacity is defined as ${cacheCapacity}`)
+        cacheD.addFront(2)
+        cacheD.addFront(3)
+        cacheD.addFront(4)
+        console.log(`the num of elements in cache is ${cacheD.size()}`)
+        console.log(`the items are [${cacheD.display()}]`)
     }
 
     get(key:number){
@@ -79,6 +93,12 @@ export class LRUCache{
         // 1. If key is not present in map, return -1
         // 2. Move the key to the front of the Deque
         // 3. return the value of our key from the map
+        if(key! in keyToValue){
+          return -1
+        }
+        let removed_key = cacheD.removeBack()
+        console.log(`removed key is  ${removed_key}`)
+        console.log(`the items are [${cacheD.display()}]`)
         
         
     }
@@ -103,6 +123,10 @@ export class LRUCache{
         // 1. Remove the key from the deque.
         // 2. Set the value of the key to in our map.
         // 3. Push the key to the front of our deque 
+    }
+
+    printMap(){
+      
     }
 
 
